@@ -1,0 +1,12 @@
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
+library(httr)
+library(dplyr)
+library(glue)
+library(pander)
+library(RMySQL)
+library(dbplyr)
+library(stringr)
+library(DBI)
+
