@@ -1,15 +1,8 @@
-library(httr)
-library(dplyr)
-library(glue)
-library(pander)
-
-API_Host = 'genius-song-lyrics1.p.rapidapi.com'
-
 ###########################################################################
 
 songs_by_artist <- function(.artist = 'Damas Gratis', .results_per_page = 10, .pages = 1, .API_Key = API_Key) {
 
-        if(is.na(.API_Key)) {
+        if (is.na(.API_Key)) {
                 print('API Key Required - Go to https://rapidapi.com/Glavier/api/genius-song-lyrics1/ to subscribe')
         }
 
@@ -58,6 +51,7 @@ songs_by_artist <- function(.artist = 'Damas Gratis', .results_per_page = 10, .p
 
 }
 
+#################################################################
 
 song_lyrics <- function(.song_id, .API_Key = API_Key) {
 
@@ -81,27 +75,6 @@ song_lyrics <- function(.song_id, .API_Key = API_Key) {
         return(dataframe)
 
 }
-
-a <- songs_by_artist(.artist = 'los prisioneros', .API_Key = API_Key)
-
-b <- a %>% mutate(lyrics = sapply(song_id, song_lyrics))
-
-pandoc.table(b)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
