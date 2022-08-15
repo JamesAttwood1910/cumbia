@@ -9,4 +9,5 @@ library(RMySQL)
 library(dbplyr)
 library(stringr)
 library(DBI)
+library(tm)
 
